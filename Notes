@@ -1,0 +1,13 @@
+Object Oriented Programming
+- Managing complexity by modeling objects
+- Support reuse of software components
+- Couples data with the tasks that manipulate data
+
+4 pillars of of OOP
+1. Abstraction-Creation of all well defined interfaces
+2. Encapsulation-keeping the implementation details of your private(hidden) data
+3. Hierarchy-resue of abstractions, compositions and derivation
+4. Polymorphism-The same code works transparently on instances of different types
+
+Inclusion Guard: Helps in making sure that class declaration is not used multiple 
+times
