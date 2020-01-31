@@ -5,6 +5,8 @@
 class tesla
 {
     public:
+      tesla();
+      tesla(std::string model, int range);
       void setModel(std::string model, int range);
       void displayModel() const;
 

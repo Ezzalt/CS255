@@ -9,6 +9,11 @@ tesla::tesla()
     vehicleRange = 0;
 }
 
+tesla::tesla(std::string model, int range)
+{
+    setModel(model, range);
+}
+
 void tesla::setModel(std::string model, int range)
 {
     vehicleModel = model;
