@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iost0ream>
 #include<random>
 #include"intStack.h"
 
