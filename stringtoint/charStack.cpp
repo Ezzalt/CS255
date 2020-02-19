@@ -27,6 +27,7 @@ bool charStack::pop(char &item)
   if(!isEmpty())
   {
     item = stack[top--];
+    height--;
     result = true;
   }
 
@@ -41,4 +42,9 @@ bool charStack::isEmpty() const
 bool charStack::isFull() const
 {
   return (top==(STACKSIZE-1));
+}
+
+int charStack::stackHeight() const
+{
+  return height;
 }

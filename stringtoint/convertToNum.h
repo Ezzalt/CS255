@@ -1,15 +1,19 @@
-#ifndef "CONVERTTONUM_H"
-#define "CONVERTTONUM_H"
+#include<string>
+#ifndef CTONUM_H
+#define CTONUM_H
+
 class convertToNum
 {
   public:
     convertToNum();
-    convertToNum(string in);
-    bool convert(string in);
+    convertToNum(std::string in);
+    bool convert(std::string in);
     long getIntValue();
     double getDecValue();
 
   private:
-    string input;
+    std::string input;
+    long returnInt;
+    double returnDouble;
 };
 #endif

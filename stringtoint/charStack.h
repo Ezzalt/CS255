@@ -1,5 +1,5 @@
-#ifndef "CHARSTACK_H"
-#define "CHARSTACK_H"
+#ifndef CHARSTACK_H
+#define CHARSTACK_H
 
 const int STACKSIZE = 100;
 const int EMPTY = -1;
@@ -7,10 +7,10 @@ const int EMPTY = -1;
 class charStack
 {
   public:
-    intStack();
-
+    charStack();
     bool push(char item);
     bool pop(char &item);
+    int stackHeight() const;
 
   private:
     bool isEmpty() const;
