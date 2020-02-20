@@ -1,3 +1,12 @@
+//------------------------------------------------------------------------------
+// Name: Nayan Bhattacharyya
+// Course-Section: CS 255-01
+// Assignment: Assignment 3
+// Due date: 02/19/2020
+// Collaborators: NA
+// Resources: NA
+// Description: The class implementation for convertToNum.h
+//------------------------------------------------------------------------------
 #include<iostream>
 #include<string>
 #include<cmath>
@@ -6,16 +15,26 @@
 
 using namespace std;
 
+//class implementation begins
+//------------------------------------------------------------------------------
+/* convertToNum() - default constructor
+*/
 convertToNum::convertToNum()
 {
   input = "";
 }
 
+//------------------------------------------------------------------------------
+/* convertToNum(string in) - overloaded constructor for string input
+*/
 convertToNum::convertToNum(string in)
 {
   input = in;
 }
 
+//------------------------------------------------------------------------------
+/* convert() - convert input string to long int and double
+*/
 bool convertToNum::convert(string in)
 {
   charStack integers, fractions;
@@ -62,11 +81,17 @@ bool convertToNum::convert(string in)
     return false;
 }
 
+//------------------------------------------------------------------------------
+/* getIntValue() - get long int value as return
+*/
 long convertToNum::getIntValue()
 {
   return returnInt;
 }
 
+//------------------------------------------------------------------------------
+/* getDoubleValue() - get long int value as return
+*/
 double convertToNum::getDecValue()
 {
   return returnDouble;

@@ -1,3 +1,12 @@
+//------------------------------------------------------------------------------
+// Name: Nayan Bhattacharyya
+// Course-Section: CS 255-01
+// Assignment: Assignment 3
+// Due date: 02/19/2020
+// Collaborators: NA
+// Resources: NA
+// Description: A program that converts input string to long int and double
+//------------------------------------------------------------------------------
 #include<iostream>
 #include<string>
 #include<iomanip>
@@ -5,6 +14,9 @@
 
 using namespace std;
 
+//implementation start
+/* main() - driver function for the program
+*/
 int main()
 {
   string in;
