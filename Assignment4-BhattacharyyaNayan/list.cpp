@@ -22,37 +22,41 @@ int evenNumbers(int *, const int);
 */
 int main()
 {
-	ifstream inFile("data.txt");	//data.txt is the input file as per instructed
 	unsigned int size = 0, i = 0;	//i is used as loop counter
 	int searchNum = 0;	//search variable place holder
 
 	int *list = NULL;
 
-	inFile >> size;
-	list = new int[size];
+	ifstream inFile("data.txt");	//data.txt is the input file as per instructed
+	if(!inFile)
+		cout << "File not found!";
+	else{
+		inFile >> size;
+		list = new int[size];
 
-	if(!list)
-		cout << "Memory allocation failed!!";	//Memory allocation failure will
-																					//proceed to exit from here
-	else
-	{
-		while(inFile >> *(list + i++) && (i < size));	//Populating the list
-
-		cout << "The number of elements in the list is: " << size << endl;
-		cout << "Mean of list is: " << meanOfList(list, size) << endl;
-
-		cout << "Input number to be searched: ";
-		cin >> searchNum;
-
-		if(search(list, size, searchNum))
-			cout << "Number is present in the list!!" << endl;
+		if(!list)
+			cout << "Memory allocation failed!!";	//Memory allocation failure will
+																						//proceed to exit from here
 		else
-			cout << "Number is not present in the list!!" << endl;
+		{
+			while(inFile >> *(list + i++) && (i < size));	//Populating the list
 
-		cout << "Number of even values: " << evenNumbers(list, size) << endl;
+			cout << "The number of elements in the list is: " << size << endl;
+			cout << "Mean of list is: " << meanOfList(list, size) << endl;
+
+			cout << "Input number to be searched: ";
+			cin >> searchNum;
+
+			if(search(list, size, searchNum))
+				cout << "Number is present in the list!!" << endl;
+			else
+				cout << "Number is not present in the list!!" << endl;
+
+			cout << "Number of even values: " << evenNumbers(list, size) << endl;
+		}
+
+		delete [] list;
 	}
-
-	delete [] list;
 	return 0;
 }
 
