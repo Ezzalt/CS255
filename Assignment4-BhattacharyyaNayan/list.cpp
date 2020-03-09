@@ -8,29 +8,30 @@
 // Description: A program to read in a file of integers and process the list of
 // 	integers.
 //------------------------------------------------------------------------------
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 //function declaration
-float meanOfList(int *, const int);
-bool search(int *, const int, const int);
-int evenNumbers(int *, const int);
+float meanOfList(const int *, const int);
+bool search(const int *, const int, const int);
+int evenNumbers(const int *, const int);
 
 //implementation start
 /* main() - driver function for the program
 */
 int main()
 {
-	unsigned int size = 0, i = 0;	//i is used as loop counter
-	int searchNum = 0;	//search variable place holder
+	unsigned int size = 0, i = 0;
+	int searchNum = 0;
 
 	int *list = NULL;
 
 	ifstream inFile("data.txt");	//data.txt is the input file as per instructed
 	if(!inFile)
-		cout << "File not found!";
-	else{
+		cout << "File not found!";	//failure on no data file found
+	else
+	{
 		inFile >> size;
 		list = new int[size];
 
@@ -39,7 +40,8 @@ int main()
 																						//proceed to exit from here
 		else
 		{
-			while(inFile >> *(list + i++) && (i < size));	//Populating the list
+			while(inFile >> *(list + i++) && (i < size))	//Populating the list
+				;
 
 			cout << "The number of elements in the list is: " << size << endl;
 			cout << "Mean of list is: " << meanOfList(list, size) << endl;
@@ -66,7 +68,7 @@ int main()
 						 const size - size of list
 		Output - mean - float value of mean of list
 */
-float meanOfList(int *list, const int size)
+float meanOfList(const int *list, const int size)
 {
 	float mean = 0.0f;
 	for(int i = 0; i < size; i++)
@@ -81,7 +83,7 @@ float meanOfList(int *list, const int size)
 						 const item - item to be searched
 		Output - valuePresent - bool value to tell if item is present
 */
-bool search(int* list, const int size,const int item)
+bool search(const int* list, const int size,const int item)
 {
 	bool valuePresent = false;
 	for(int i = 0; i < size; i++)
@@ -99,7 +101,7 @@ bool search(int* list, const int size,const int item)
 						 const size - size of list
 		output - even - Number of even values in list
 */
-int evenNumbers(int *list, const int size)
+int evenNumbers(const int *list, const int size)
 {
 	int even = 0;
 	for(int i = 0; i < size; i++)
