@@ -68,7 +68,6 @@ void input(inventory &storage, ifstream &in)
 {
   while(getline(in,storage.manufacturer))
   {
-
     getline(in,storage.processor);
     in>>storage.ram>>storage.diskSize>>storage.cost>>ws;
     getline(in,storage.location);
