@@ -1,16 +1,23 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
+
 int main(){
-	float volts = 800;
-	float current = 7.5;
-	float power;
+	int result = 0, x = 20, i = 0;
+	while(x != 0)
+	{
+			result += (pow(4,i++)) * (x % 10);
+			x /= 10;
+	}
+	int y = 10, r2 = 0;
+	i = 0;
+	while(y != 0)
+	{
+			r2 += (pow(4,i++)) * (y % 10);
+			y /= 10;
+	}
 
-	power = volts * current * 0.83;
-
-	cout<<"PV: "<<volts<<endl;
-	cout<<"PC: "<<current<<endl;
-	cout<<"Powewr: "<<power<<" watts"<<endl;
-
+	cout << result+r2;
 	return 0;
 }
